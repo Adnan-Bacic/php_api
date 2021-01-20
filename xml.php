@@ -28,23 +28,10 @@
 		}
 	}
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>XML API</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-	<div class="container">
+	<div class="container d-none" id="xml">
 		<div class="row">
 			<div class="col-12">
-				<h1>Search for medicine</h1>
+				<h1>Search for medicine XML</h1>
 				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="GET" autocomplete="off">
 					<div class="form-group">
 						<label for="search">Name</label>
@@ -56,7 +43,7 @@
 							<option value="stof">Virksomtstof</option>
 						</select>
 					</div>
-					<button type="submit" class="btn btn-primary" name="submit">Search</button>
+					<button type="submit" class="btn btn-success" name="submit">Search</button>
 				</form>
 			</div>
 		</div>
@@ -72,7 +59,7 @@
 			<div class="col-12">
 			<h2><?php echo "Results for {$search}" ?></h2>
 				<table class="table table-striped">
-					<thead class="thead bg-primary">
+					<thead class="thead bg-success">
 						<tr class="text-light">
 							<th scope="col">#</th>
 							<th scope="col">Navn</th>
@@ -109,5 +96,3 @@
 		}
 		?>
 	</div>
-</body>
-</html>
